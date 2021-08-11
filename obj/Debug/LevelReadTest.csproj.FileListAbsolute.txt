@@ -1,0 +1,10 @@
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\bin\Debug\LevelReadTest.exe.config
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\bin\Debug\LevelReadTest.exe
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\bin\Debug\LevelReadTest.pdb
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\obj\Debug\LevelReadTest.csprojAssemblyReference.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\obj\Debug\LevelReadTest.Form1.resources
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\obj\Debug\LevelReadTest.Properties.Resources.resources
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\obj\Debug\LevelReadTest.csproj.GenerateResource.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\obj\Debug\LevelReadTest.csproj.CoreCompileInputs.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\obj\Debug\LevelReadTest.exe
+H:\Computer Science\Final Project\Prototype\LevelReadTest\LevelReadTest\obj\Debug\LevelReadTest.pdb

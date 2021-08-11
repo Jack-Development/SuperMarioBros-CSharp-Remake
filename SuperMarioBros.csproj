@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A436BE31-D254-40E7-B44A-73C6557EA289}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SuperMarioBros</RootNamespace>
+    <AssemblyName>SuperMarioBros</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Block.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrickBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hill1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hill2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hill3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hill4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hill5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioSpawnGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cloud6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bush1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bush2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bush3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolidBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlock2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlockHit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flagpole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlagpoleTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castle3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castle4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castle5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Castle6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ground2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrickBlock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PipeSide1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PipeSide2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PipeConnector1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PipeConnector2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pipe42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvisQuestionBlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireFlower1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OneUpShroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnderCoin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinGet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinGet2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinGet3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinGet4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrickBlockBreak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireFlower2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireFlower3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FireFlower4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioCrouch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioCrouch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fire4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Explosion3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioFire2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle303.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump303.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight303.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight310.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight311.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight313.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight320.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioCrouch400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioCrouch401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioCrouch402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioCrouch403.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioIdle403.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight403.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight410.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight411.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight412.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight413.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight420.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight421.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight422.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight423.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump403.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goomba0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goomba1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gooma2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goomba2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoombaSquish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hill40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlock3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlock11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlock21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionBlockHit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SolidBlock1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrickBlockBreak1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KoopaTroopa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KoopaTroopa11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KoopaShell.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KoopaShell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinTop1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinTop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinTop3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoinTop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiCrouch10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiCrouch20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiCrouch400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiCrouch401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiCrouch402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiCrouch403.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiFire20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle303.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiIdle403.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiJump00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiJump10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiJump20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiJump300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LuigiJump301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump3021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump3031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump4001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump4011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump4021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioJump4031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioPole221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight314.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight3231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarioRight4231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title140.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title170.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title190.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title210.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title220.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ttile230.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title260.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title290.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title310.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title320.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title330.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title340.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title350.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title370.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title380.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title390.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title410.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Titl420.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title430.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title440.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title460.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title470.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title490.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title520.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title530.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title540.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title550.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title560.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title570.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title580.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Title590.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuSelect.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

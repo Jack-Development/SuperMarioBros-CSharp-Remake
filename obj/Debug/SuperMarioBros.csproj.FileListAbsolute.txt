@@ -1,0 +1,30 @@
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Debug\SuperMarioBros.exe.config
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Debug\SuperMarioBros.exe
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Debug\SuperMarioBros.pdb
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.csprojAssemblyReference.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.Form1.resources
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.Properties.Resources.resources
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.csproj.GenerateResource.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.csproj.CoreCompileInputs.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.exe
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.pdb
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Debug\SuperMarioBros.exe.config
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Debug\SuperMarioBros.exe
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Debug\SuperMarioBros.pdb
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.csprojAssemblyReference.cache
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.Form1.resources
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.Properties.Resources.resources
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.csproj.GenerateResource.cache
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.csproj.CoreCompileInputs.cache
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.exe
+H:\Computer Science\Year 1\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Debug\SuperMarioBros.pdb
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\bin\Debug\SuperMarioBros.exe.config
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\bin\Debug\SuperMarioBros.exe
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\bin\Debug\SuperMarioBros.pdb
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\obj\Debug\SuperMarioBros.csprojAssemblyReference.cache
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\obj\Debug\SuperMarioBros.Form1.resources
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\obj\Debug\SuperMarioBros.Properties.Resources.resources
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\obj\Debug\SuperMarioBros.csproj.GenerateResource.cache
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\obj\Debug\SuperMarioBros.csproj.CoreCompileInputs.cache
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\obj\Debug\SuperMarioBros.exe
+H:\Computer Science\Year 2\Mario Project\SuperMarioBros\obj\Debug\SuperMarioBros.pdb

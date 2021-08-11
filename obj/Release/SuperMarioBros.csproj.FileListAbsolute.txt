@@ -1,0 +1,10 @@
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Release\SuperMarioBros.exe.config
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Release\SuperMarioBros.exe
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\bin\Release\SuperMarioBros.pdb
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Release\SuperMarioBros.csprojAssemblyReference.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Release\SuperMarioBros.Form1.resources
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Release\SuperMarioBros.Properties.Resources.resources
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Release\SuperMarioBros.csproj.GenerateResource.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Release\SuperMarioBros.csproj.CoreCompileInputs.cache
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Release\SuperMarioBros.exe
+H:\Computer Science\Final Project\Prototype\LevelReadTest\SuperMarioBros\obj\Release\SuperMarioBros.pdb
