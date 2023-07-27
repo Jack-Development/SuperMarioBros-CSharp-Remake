@@ -1,3 +1,9 @@
+&nbsp;
+<div id="header" align="center">
+  <img src="https://github.com/Jack-Development/SuperMarioBros-CSharp-Remake/blob/main/Resources/logo.png" width="300"/>
+</div>
+&nbsp;
+
 # SuperMarioBros-CSharp-Remake
 
 Welcome to the SuperMarioBros remake project! This project is a reimagining of the classic Super Mario Bros game, written in C# and developed using Visual Studio's Windows Forms Application platform.
